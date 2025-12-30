@@ -52,7 +52,7 @@ The project is built with modularity in mind:
 
 - `analyzer.py`: Manages the connection to OpenAI and prompt engineering.
 
-- `app.py`: The entry point that integrates the backend logic with the Streamlit UI.
+- `main.py`: The entry point that integrates the backend logic with the Streamlit UI.
 
 ## 🚀 **Professional Features**
 - **Headless Browsing:** Optimized for deployment on Linux servers.
