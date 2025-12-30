@@ -23,7 +23,7 @@ This project uses `pip-tools` to ensure that every developer and server runs the
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/EnzoItaliano/competitor-monitor.git](https://github.com/EnzoItaliano/competitor-monitor.git)
+   git clone https://github.com/EnzoItaliano/competitor-monitor.git
    cd competitor-monitor
 
 2. **Sync the dependencies:** This project uses `pip-sync` to ensure your virtual environment matches the locked requirements.txt.
