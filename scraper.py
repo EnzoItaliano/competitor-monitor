@@ -19,11 +19,14 @@ def get_amazon_data(product_url):
     # Configure Chrome options
     options = Options()
     options.add_argument("--headless")  # Run Chrome in headless mode (no UI)
+    options.add_argument("--no-sandbox") # Necessary to run in a restricted container like Streamlit's
+    options.add_argument("--disable-dev-shm-usage") # Necessary to run in a restricted container like Streamlit's
+    options.add_argument("--disable-gpu")
     # Used to set a specific user agent
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36")
 
     # Initialize the Chrome driver using webdriver_manager to handle automatic driver installation
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver = webdriver.Chrome(options=options)
     
     try:
         # Navigate to the given product URL
